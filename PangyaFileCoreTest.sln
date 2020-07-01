@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PangyaFileCore", "PangyaFileCore\PangyaFileCore.csproj", "{6B47B60C-20BC-448C-8ECA-114749FAF412}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PangyaFileCoreTest", "PangyaFileCoreTest\PangyaFileCoreTest.csproj", "{57D5C7D8-2394-4148-89FC-030B75C914B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B47B60C-20BC-448C-8ECA-114749FAF412}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B47B60C-20BC-448C-8ECA-114749FAF412}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B47B60C-20BC-448C-8ECA-114749FAF412}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B47B60C-20BC-448C-8ECA-114749FAF412}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57D5C7D8-2394-4148-89FC-030B75C914B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57D5C7D8-2394-4148-89FC-030B75C914B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57D5C7D8-2394-4148-89FC-030B75C914B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57D5C7D8-2394-4148-89FC-030B75C914B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E955AACF-E5A0-461B-88FD-45D0E6D9401B}
+	EndGlobalSection
+EndGlobal
