@@ -1,9 +1,10 @@
 ﻿namespace PangyaFileCoreTest
 {
-    partial class Form1
-    {/// <summary>
-     /// Required designer variable.
-     /// </summary>
+    partial class PartFileIFF
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
@@ -27,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PartFileIFF));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,6 +38,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbSearchByChar = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.TP_Basic = new System.Windows.Forms.TabPage();
@@ -47,7 +49,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtIcon = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.CharacterName = new System.Windows.Forms.TextBox();
+            this.PartName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.TP_SHOP = new System.Windows.Forms.TabPage();
             this.CheckDisplay = new System.Windows.Forms.CheckBox();
@@ -99,7 +101,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.TxtDesc = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtTexture4 = new System.Windows.Forms.TextBox();
+            this.cmbTest = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -138,7 +140,7 @@
             this.saveFileToolStripMenuItem.Name = "saveFileToolStripMenuItem";
             this.saveFileToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.saveFileToolStripMenuItem.Text = "Save File";
-            this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.SaveCharacter_Click);
+            this.saveFileToolStripMenuItem.Click += new System.EventHandler(this.SavePart_Click);
             // 
             // BtnClear
             // 
@@ -165,9 +167,9 @@
             this.columnHeader1,
             this.columnHeader2});
             this.lstStrings.FullRowSelect = true;
-            this.lstStrings.Location = new System.Drawing.Point(6, 53);
+            this.lstStrings.Location = new System.Drawing.Point(6, 95);
             this.lstStrings.Name = "lstStrings";
-            this.lstStrings.Size = new System.Drawing.Size(260, 427);
+            this.lstStrings.Size = new System.Drawing.Size(260, 385);
             this.lstStrings.TabIndex = 39;
             this.lstStrings.UseCompatibleStateImageBehavior = false;
             this.lstStrings.View = System.Windows.Forms.View.Details;
@@ -185,20 +187,47 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbSearchByChar);
             this.groupBox1.Controls.Add(this.lstStrings);
             this.groupBox1.Controls.Add(this.txtFilter);
             this.groupBox1.Controls.Add(this.BtnClear);
             this.groupBox1.Location = new System.Drawing.Point(0, 35);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(284, 494);
+            this.groupBox1.Size = new System.Drawing.Size(276, 485);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search Items !";
             // 
+            // cmbSearchByChar
+            // 
+            this.cmbSearchByChar.FormattingEnabled = true;
+            this.cmbSearchByChar.Items.AddRange(new object[] {
+            "(All Chars)",
+            "NURI",
+            "HANA",
+            "AZER",
+            "CESILLIA",
+            "MAX",
+            "KOOH",
+            "ARIN",
+            "KAZ",
+            "LUCIA",
+            "NELL",
+            "SPIKA",
+            "NURI_R",
+            "HANA_R",
+            "CESILLIA_R"});
+            this.cmbSearchByChar.Location = new System.Drawing.Point(12, 47);
+            this.cmbSearchByChar.Name = "cmbSearchByChar";
+            this.cmbSearchByChar.Size = new System.Drawing.Size(80, 21);
+            this.cmbSearchByChar.TabIndex = 40;
+            this.cmbSearchByChar.Text = "(All Chars)";
+            this.cmbSearchByChar.SelectedIndexChanged += new System.EventHandler(this.SearchCharByString);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tabControl1);
-            this.groupBox2.Location = new System.Drawing.Point(290, 35);
+            this.groupBox2.Location = new System.Drawing.Point(288, 35);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(551, 239);
             this.groupBox2.TabIndex = 41;
@@ -219,6 +248,8 @@
             // 
             // TP_Basic
             // 
+            this.TP_Basic.Controls.Add(this.label18);
+            this.TP_Basic.Controls.Add(this.cmbTest);
             this.TP_Basic.Controls.Add(this.CheckItemActive);
             this.TP_Basic.Controls.Add(this.cmbLevel);
             this.TP_Basic.Controls.Add(this.label17);
@@ -226,7 +257,7 @@
             this.TP_Basic.Controls.Add(this.label16);
             this.TP_Basic.Controls.Add(this.txtIcon);
             this.TP_Basic.Controls.Add(this.label2);
-            this.TP_Basic.Controls.Add(this.CharacterName);
+            this.TP_Basic.Controls.Add(this.PartName);
             this.TP_Basic.Controls.Add(this.label1);
             this.TP_Basic.Location = new System.Drawing.Point(4, 22);
             this.TP_Basic.Name = "TP_Basic";
@@ -239,7 +270,7 @@
             // CheckItemActive
             // 
             this.CheckItemActive.AutoSize = true;
-            this.CheckItemActive.Location = new System.Drawing.Point(69, 146);
+            this.CheckItemActive.Location = new System.Drawing.Point(69, 168);
             this.CheckItemActive.Name = "CheckItemActive";
             this.CheckItemActive.Size = new System.Drawing.Size(79, 17);
             this.CheckItemActive.TabIndex = 43;
@@ -295,12 +326,12 @@
             this.label2.TabIndex = 37;
             this.label2.Text = "Icon:";
             // 
-            // CharacterName
+            // PartName
             // 
-            this.CharacterName.Location = new System.Drawing.Point(69, 30);
-            this.CharacterName.Name = "CharacterName";
-            this.CharacterName.Size = new System.Drawing.Size(239, 20);
-            this.CharacterName.TabIndex = 36;
+            this.PartName.Location = new System.Drawing.Point(69, 30);
+            this.PartName.Name = "PartName";
+            this.PartName.Size = new System.Drawing.Size(239, 20);
+            this.PartName.TabIndex = 36;
             // 
             // label1
             // 
@@ -689,8 +720,6 @@
             // 
             // TP_MODEL_AND_TXTURE
             // 
-            this.TP_MODEL_AND_TXTURE.Controls.Add(this.txtTexture4);
-            this.TP_MODEL_AND_TXTURE.Controls.Add(this.label18);
             this.TP_MODEL_AND_TXTURE.Controls.Add(this.TxtBoxTexture3);
             this.TP_MODEL_AND_TXTURE.Controls.Add(this.label13);
             this.TP_MODEL_AND_TXTURE.Controls.Add(this.TxtBoxTexture2);
@@ -773,39 +802,40 @@
             // 
             // TxtDesc
             // 
-            this.TxtDesc.Location = new System.Drawing.Point(5, 19);
+            this.TxtDesc.Location = new System.Drawing.Point(4, 16);
             this.TxtDesc.Multiline = true;
             this.TxtDesc.Name = "TxtDesc";
-            this.TxtDesc.Size = new System.Drawing.Size(548, 179);
+            this.TxtDesc.Size = new System.Drawing.Size(545, 179);
             this.TxtDesc.TabIndex = 36;
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.TxtDesc);
-            this.groupBox3.Location = new System.Drawing.Point(294, 280);
+            this.groupBox3.Location = new System.Drawing.Point(284, 280);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(553, 198);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Item Description";
             // 
-            // txtTexture4
+            // cmbTest
             // 
-            this.txtTexture4.Location = new System.Drawing.Point(203, 87);
-            this.txtTexture4.Name = "txtTexture4";
-            this.txtTexture4.Size = new System.Drawing.Size(175, 20);
-            this.txtTexture4.TabIndex = 48;
+            this.cmbTest.FormattingEnabled = true;
+            this.cmbTest.Location = new System.Drawing.Point(70, 137);
+            this.cmbTest.Name = "cmbTest";
+            this.cmbTest.Size = new System.Drawing.Size(87, 21);
+            this.cmbTest.TabIndex = 44;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(208, 71);
+            this.label18.Location = new System.Drawing.Point(13, 140);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(52, 13);
-            this.label18.TabIndex = 47;
-            this.label18.Text = "Texture 4";
+            this.label18.Size = new System.Drawing.Size(56, 13);
+            this.label18.TabIndex = 45;
+            this.label18.Text = "CharType:";
             // 
-            // CharacterEditor
+            // PartEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -815,9 +845,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "CharacterEditor";
-            this.Text = "Character Editor";
-            this.Load += new System.EventHandler(this.CharacterEditor_Load);
+            this.Name = "PartEditor";
+            this.Text = "Part Editor";
+            this.Load += new System.EventHandler(this.PartEditor_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -859,7 +889,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage TP_Basic;
-        private System.Windows.Forms.TextBox CharacterName;
+        private System.Windows.Forms.TextBox PartName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage TP_MODEL_AND_TXTURE;
         private System.Windows.Forms.TextBox TxtBoxTexture3;
@@ -910,14 +940,14 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.ComboBox cmbSearchByChar;
         private System.Windows.Forms.CheckBox CheckSaleEnd;
         private System.Windows.Forms.DateTimePicker DateEnd;
         private System.Windows.Forms.CheckBox CheckSaleStart;
         private System.Windows.Forms.DateTimePicker DateStart;
         private System.Windows.Forms.CheckBox CheckItemActive;
         private System.Windows.Forms.CheckBox CheckDisplay;
-        private System.Windows.Forms.TextBox txtTexture4;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox cmbTest;
     }
 }
-

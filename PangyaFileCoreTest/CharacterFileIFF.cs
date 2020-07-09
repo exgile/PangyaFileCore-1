@@ -7,12 +7,11 @@ using System;
 
 namespace PangyaFileCoreTest
 {
-    public partial class Form1 : Form
+    public partial class CharacterFileIFF : Form
     {
-        public Form1()
+        public CharacterFileIFF()
         {
             InitializeComponent();
-            new IffBaseManager();
         }
 
         private void SaveCharacter_Click(object sender, EventArgs e)

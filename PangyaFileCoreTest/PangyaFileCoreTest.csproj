@@ -46,14 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AppMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AppMain.Designer.cs">
+      <DependentUpon>AppMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CharacterFileIFF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CharacterFileIFF.Designer.cs">
+      <DependentUpon>CharacterFileIFF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemFileIFF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemFileIFF.Designer.cs">
+      <DependentUpon>ItemFileIFF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartFileIFF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartFileIFF.Designer.cs">
+      <DependentUpon>PartFileIFF.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppMain.resx">
+      <DependentUpon>AppMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CharacterFileIFF.resx">
+      <DependentUpon>CharacterFileIFF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ItemFileIFF.resx">
+      <DependentUpon>ItemFileIFF.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
