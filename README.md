@@ -1,26 +1,26 @@
 # PangyaFileCore
   
-Criado para Leitura dos arquivos .IFF do pangya com GameServer
+Created for reading pangya .IFF files with GameServer
 
-Minha idéia atual ajudar a comunidade na leitura dos arquivos.
+My current idea is to help the community in reading the files.
 
-Atualizações 06/09/2019, Suportando Diversos Arquivos Agora.
+Updates 06/09/2019, Supporting Multiple Files Now.
 
-Criado o Library PangyaFileCore. Com isto, toda estrutura e responsabilidade de ler os arquivos é desta biblioteca.
+Created the PangyaFileCore Library. With this, the entire structure and responsibility of reading the files belongs to this library.
 
 
-Agradeço o Usuário eantoniobr que tem ajudado.
+I thank the User eantoniobr who has helped.
 
-Vocês também podem ajudar, meus agradeçimentos serão acrescentados aqui.
+You can also help, my thanks will be added here.
 
--------------------------------------------------------------------------------------------------------------------------------
-                                              Como Usar:
+-------------------------------------------------- -------------------------------------------------- ---------------------------
+                                               How to use:
 
-é necessario criar uma pasta com nome "data", dentro dela deve colocar o arquivo " pangya_gb.iff "
+it is necessary to create a folder named "data", inside it you must place the file "pangya_gb.iff"
 
-é necessario também ter o Visual Studio 2017 Instalado na sua Maquina para compilar o projeto
+it is also necessary to have Visual Studio 2017 installed on your machine to compile the project
 
-é usavel em GameServer ou outros programas 
+is usable in GameServer or other programs
 
--------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------- -------------------------------------------------- ---------------------------
 
