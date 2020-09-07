@@ -7,7 +7,7 @@ namespace PangyaFileCore.Struct
     /// Common data structure found at the head of many IFF datasets
     /// </summary>
     [StructLayout(LayoutKind.Sequential, Pack = 4)]
-    public struct IFFCommon //size = 0x90(144 bytes)
+    public struct IFFCommon //size = 163 bytes
     {
         public uint Enabled { get; set; }//4 position
         public uint TypeID { get; set; }//8 position
